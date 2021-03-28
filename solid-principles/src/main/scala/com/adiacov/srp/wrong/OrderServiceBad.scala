@@ -2,21 +2,23 @@ package com.adiacov.srp.wrong
 
 import com.adiacov.model.Order
 
+// SRP violated
+// OrderServiceBad does multiple operations not related to each other
+
 class OrderServiceBad {
 
   def createOrder(): Unit = {
-    // create new Order
+    // create new Order logic
   }
 
   def save(order: Order): Unit = {
-    // open DB session
-    // persist Order
-    // close DB session
+    // DB logic
+    // create session, persist...
   }
 
   def sendMail(order: Order): Unit = {
-    // create mail header, body
-    // send mail
+    // create mail logic
+    // create mail body, send...
   }
 
 }

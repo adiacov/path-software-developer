@@ -5,19 +5,19 @@ package com.adiacov.ocp.correct
 abstract class OrderReport1(customer: String,
                             total: Double) {
 
-  def printOrder: Unit
+  def createReport(): String
 }
 
 case class OrderReport2(customer: String, total: Double) extends OrderReport1(customer, total) {
-  override def printOrder: Unit = {
-    println(s"$customer bought items for $total dollars")
+  override def createReport(): String = {
+    "Create report from details: customer, total, email"
   }
 }
 
 case class OrderReport3(customer: String,
                         email: String,
                         total: Double) extends OrderReport1(customer, total) {
-  override def printOrder: Unit = {
-    println(s"$customer (email: $email) bought items for $total dollars")
+  override def createReport(): String = {
+    "Create report from details: customer, total, email"
   }
 }

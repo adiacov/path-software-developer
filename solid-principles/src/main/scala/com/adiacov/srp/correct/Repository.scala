@@ -1,5 +1,5 @@
 package com.adiacov.srp.correct
 
-trait Repo[T] {
+trait Repository[T] {
   def save(value: T): Unit
 }
